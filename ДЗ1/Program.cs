@@ -1,4 +1,6 @@
-﻿int a, b, max;
+﻿//Задача 2
+
+int a, b, max;
 
 Console.WriteLine("Введите число ");
 a = Convert.ToInt32(Console.ReadLine());
