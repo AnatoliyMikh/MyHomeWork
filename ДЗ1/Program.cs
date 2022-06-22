@@ -11,8 +11,11 @@ b = Convert.ToInt32(Console.ReadLine());
 if (a < b)
 {   
     max = b;
+    min = a;
 }
 else
     max = a;
+    min = b;
     
 Console.Write("Максимальное число: " + max);
+Console.Write("Минимальное число: " + min);
