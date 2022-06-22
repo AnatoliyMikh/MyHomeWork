@@ -1,6 +1,6 @@
 ﻿//Задача 2
 
-int a, b, max;
+int a, b, max, min;
 
 Console.WriteLine("Введите число ");
 a = Convert.ToInt32(Console.ReadLine());
@@ -17,5 +17,5 @@ else
     max = a;
     min = b;
     
-Console.Write("Максимальное число: " + max);
-Console.Write("Минимальное число: " + min);
+Console.WriteLine("Максимальное число: " + max);
+Console.WriteLine("Минимальное число: " + min);
