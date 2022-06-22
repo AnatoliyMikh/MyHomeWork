@@ -22,7 +22,7 @@ Console.WriteLine("Минимальное число: " + min); */
 
 //Задача 4
 
-int a, b, c, max;
+/*int a, b, c, max;
 
 Console.WriteLine("Введите число ");
 a = Convert.ToInt32(Console.ReadLine());
@@ -49,4 +49,18 @@ if (max < c)
 {
     max = c;
     Console.WriteLine("Максимальное число: " + max);
+}*/
+
+//Задача 6
+
+int a;
+
+Console.WriteLine("Введите число ");
+a = Convert.ToInt32(Console.ReadLine());
+
+if (a%2 == 0)
+{
+    Console.WriteLine(a + " четное");
 }
+else
+    Console.WriteLine(a + " нечетное");
