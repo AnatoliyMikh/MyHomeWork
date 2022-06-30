@@ -16,35 +16,21 @@ Console.WriteLine("Вторая цифра: " + res);*/
 //Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
 void ThirdDigit(int num1)
 {
-    /*int num2 = num1/100;
-
-    if(num2 <= 99)
-        {
-            Console.WriteLine("Введите число:");
-        }
-    else
-        {
-        int number = num2 % 10;
-
-        Console.WriteLine("Третья цифра " + number);
-        }*/
     if (num1 <= 99)
     {
         Console.WriteLine("У числа нет третьей цифры");
     }
     else
-    {
-        do
-        {
-            num1 = num1/10;
-        }   
-        while(num1 > 100 && num1 <= 999);
-        if (num1 < 100)
-        {
-            Console.WriteLine("loshara");
-        }
+    {   
+        int num2=0;
 
-        int num2 = num1%10;
+        while(num1 > 100)
+        {
+            num2 = num1%10;
+            num1 = num1/10;
+        }
+        
+        
         Console.WriteLine("Третья цифра " + num2);
     }
 }
