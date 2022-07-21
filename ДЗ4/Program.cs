@@ -1,5 +1,5 @@
 ﻿//Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе. 
-/*int SumOfDigits(int n)
+int SumOfDigits(int n)
 {
     int sum = 0;
     int num = n;
@@ -15,7 +15,7 @@
 Console.Write("Введите число: ");
 int n = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine(SumOfDigits(n));
-*/
+
 //Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
 int Massive(int n1)
 {
