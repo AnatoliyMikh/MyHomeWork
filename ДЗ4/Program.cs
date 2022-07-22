@@ -17,7 +17,6 @@ int n = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine(SumOfDigits(n));
 
 //Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
-//Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
 void Massive(int n1)
 {
    int[] arr = new int[n1];
