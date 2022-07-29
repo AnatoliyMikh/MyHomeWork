@@ -1,5 +1,5 @@
 ﻿// Задача 41: Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
-/*
+
 double[] CreateNewArray(int n1)
 {
    double[] arr = new double[n1];
@@ -29,7 +29,6 @@ int n1 = Convert.ToInt32(Console.ReadLine());
 
 double[] array = CreateNewArray(n1);
 Console.WriteLine("Количество элементов равно: " + FindElement(array));
-*/
 
 
 // Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых, заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
