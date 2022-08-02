@@ -1,5 +1,5 @@
 ﻿// Задача 47. Задайте двумерный массив размером m×n, заполненный случайными вещественными числами.
-/*
+
 double[,] CreateRandomArray(int rows, int columns)
 {
     double[,] newArray = new double[rows,columns];
@@ -29,7 +29,7 @@ Console.Write("Введите количество столбцов: ");
 int n = Convert.ToInt32(Console.ReadLine());
 
 double[,] myArray = CreateRandomArray(m,n);
-ShowArray(myArray); */
+ShowArray(myArray); 
 
 // Задача 50. Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, и возвращает значение этого элемента или же указание, что такого элемента нет.
 int[,] CreateRandomArray(int rows, int columns)
@@ -87,7 +87,7 @@ FindElement(myArray, r1, p1);
 
 
 // Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
-/*
+
 int[,] CreateRandomArray(int rows, int columns)
 {
     int[,] newArray = new int[rows,columns];
@@ -135,4 +135,4 @@ int n = Convert.ToInt32(Console.ReadLine());
 
 int[,] myArray = CreateRandomArray(m,n);
 ShowArray(myArray);
-FindАverage(myArray); */
+FindАverage(myArray);
