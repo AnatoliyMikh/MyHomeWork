@@ -94,8 +94,6 @@ void FindString(int[,] massive)
         }
         n++;
     }
-    
-    // int min = sum[0];
      
     if(sum[0] < sum[1] && sum[0] < sum[2] && sum[0] < sum[3] && sum[0] < sum[4])
     {
