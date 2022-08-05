@@ -1,5 +1,5 @@
 ﻿// Задача 54: Задайте двумерный массив. Напишите программу, которая упорядочит по убыванию элементы каждой строки двумерного массива.
-/*
+
 int[,] CreateRandomArray(int rows, int columns)
 {
     int[,] newArray = new int[rows,columns];
@@ -23,25 +23,30 @@ void ShowArray(int[,] array)
     Console.WriteLine();
 }
 
-int[,] Ordering(int[,] arr)
+void Ordering(int[,] arr)
 {
     int buf = 0;
-
+    
     for(int i=0; i < arr.GetLength(0); i++)
     {   
         for(int j=0; j < arr.GetLength(1); j++)
         {
-            if(arr[i,j] < arr[i,j+1])
+            for(int n=j+1; n < arr.GetLength(1); n++)
             {
-                buf = arr[i,j+1];
-                arr[i,j+1] = arr[i,j];
-                arr[i,j] = buf;
-            }
-            
+                if(j != arr.GetLength(1)-1)
+                    if(arr[i,j] <= arr[i,n])
+                        {
+                            buf = arr[i,n];
+                            arr[i,n] = arr[i,j];
+                            arr[i,j] = buf;
+                        }
+            }       
+            Console.Write(arr[i,j] + " ");
         }
-        Console.WriteLine();
-    }
-    return Ordering(arr);
+        Console.WriteLine();    
+    }        
+      
+    
 }
 
 Console.Write("Введите количество строк: ");
@@ -49,15 +54,15 @@ int m = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите количество столбцов: ");
 int n = Convert.ToInt32(Console.ReadLine());
 
+
 int[,] myArray = CreateRandomArray(m,n);
 ShowArray(myArray); 
+Console.Write("Отсортированный массив: ");
+Ordering(myArray);
 
-Console.WriteLine("Полученный массив: ");
-Console.WriteLine(Ordering(myArray));
-*/
 
 // Задача 56: Задайте прямоугольный двумерный массив. Напишите программу, которая будет находить строку с наименьшей суммой элементов.
-/*
+
 int[,] CreateRandomArray(int rows, int columns)
 {
     int[,] newArray = new int[rows,columns];
@@ -129,9 +134,10 @@ ShowArray(myArray);
 
 FindString(myArray);
 
-*/
+
 
 // Задача 62. Заполните спирально массив 4 на 4.
+
 int[,] Spiral(int n, int b)
 {
     int[,] result = new int[n, b];
@@ -176,7 +182,7 @@ int[,] Spiral(int n, int b)
     return result;
 }
 
-void Show2dArray(int[,] arr)
+void ShowArray(int[,] arr)
 {
     for (int i = 0; i < arr.GetLength(0); i++)
     {
@@ -195,4 +201,4 @@ int columns = 4;
 
 int[,] myArr = Spiral(rows, columns);
 
-Show2dArray(myArr);
+ShowArray(myArr); 
