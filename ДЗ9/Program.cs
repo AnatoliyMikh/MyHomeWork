@@ -19,14 +19,19 @@ int m = 1;
 Console.WriteLine("Количество цифр в числе " + Amount(m, N)); */
 
 // Задача 66: Задайте значения M и N. Напишите программу, которая найдёт сумму натуральных элементов в промежутке от M до N.
-void SumOfDigits(int m, int n)
+int SumOfDigits(int m, int n)
 {
-    if (m <= n)
-        if(m > 0 && m % 10 ==0)
-            {
-               m = m + SumOfDigits(m+1, n);
-            }
-    Console.WriteLine(m);
+    // int sum = m;
+    if (m < n)
+        if(m > 0)
+        {
+            return m + SumOfDigits(m+1, n);
+        }
+        else if(m <= 0)
+        {
+            return SumOfDigits(m+1, n);
+        }
+    return m;
 }
 
 Console.WriteLine("Введите начальное число отрезка: ");
@@ -35,4 +40,4 @@ int M = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите конечное число отрезка: ");
 int N = Convert.ToInt32(Console.ReadLine());
 
-Console.Writeline("Сумма натуральных чисел в отрезке равна: " + SumOfDigits(M, N));
+Console.WriteLine("Сумма натуральных чисел в отрезке равна: " + SumOfDigits(M, N));
