@@ -51,7 +51,7 @@ string[] CreateStringArr(int n)
     string[] arr = new string[n];
     for (int i = 0; i < n; i++)
     {
-        Console.Write("Enter the string array element number: " + (i + 1) + " ");
+        Console.Write("Введите номер массива: " + (i + 1) + " ");
         string? newElem = Convert.ToString(Console.ReadLine());
         arr[i] = newElem;
     }
@@ -68,27 +68,27 @@ void PrintArr(string[] arr)
     Console.WriteLine();
 }
 
-string[] СoncatenationArr (string[] arrOne, string[] arrTwo) {
-    int lengArr = arrOne.Length;
+string[] Skleivanie (string[] first, string[] second) {
+    int lengArr = first.Length;
     string[] newArr = new string[lengArr];
     for (int i = 0; i < lengArr; i++)
     {
-        newArr[i] = arrOne[i] + arrTwo[i];
+        newArr[i] = first[i] + second[i];
     }
     return newArr;
 }
 
-Console.Write("Enter the number of words for the two arrays: ");
+Console.Write("Введите количество слов для двух массивов: ");
 int n = Convert.ToInt32(Console.ReadLine());
 
-string[] userArrFirst = CreateStringArr(n);
+string[] FirstArray = CreateStringArr(n);
 
-string[] userArrSecond = CreateStringArr(n);
+string[] SecondArray = CreateStringArr(n);
 
-PrintArr(userArrFirst);
+PrintArr(FirstArray);
 
-PrintArr(userArrSecond);
+PrintArr(SecondArray);
 
-string[] concatArr = СoncatenationArr(userArrFirst, userArrSecond);
+string[] myArray = Skleivanie(FirstArray, SecondArray);
 
-PrintArr(concatArr);
+PrintArr(myArray);
